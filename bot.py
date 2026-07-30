@@ -128,7 +128,7 @@ def chat_completion(messages, use_tools=True):
             "User-Agent": "Mozilla/5.0 (data-analyst-bot)",
         },
         json=body,
-        timeout=180,
+        timeout=100,
     )
     r.raise_for_status()
     return r.json()["choices"][0]["message"]
